@@ -1,72 +1,79 @@
-# Student-Grade-Tracker
+# Student Grade Tracker
 
-Student Grade Tracker
-A comprehensive student grade tracker that uses CSV files, organized folder structures (including a "Reports" folder for data visualizations), and integrates various data structures—lists, dictionaries, tuples, and sets—to simulate realistic data analysis and reporting. The project generates fake data for students, courses, and grades (with grades following a normal distribution), then saves and plots the data using popular Python libraries.
+A comprehensive student grade tracker that uses CSV files, organized folder structures (including a **"Reports"** folder for data visualizations), and integrates various data structures—**lists**, **dictionaries**, **tuples**, and **sets**—to simulate realistic data analysis and reporting. The project generates fake data for students, courses, and grades (with grades following a normal distribution), then saves and plots the data using popular Python libraries.
 
-Table of Contents
-Features
-Installation
-Usage
-Project Structure
-Data Generation Details
-Data Structures & Functionalities
-Links
-License
-Features
-CSV Filing System & Directory Structure:
-Creates a main folder named "Student Grade Tracker".
-Generates separate CSV files for:
-Students
-Courses
-Grades
-Creates a "Reports" subfolder that stores saved plots and visualizations.
-Data Generation:
-Uses the Faker library for realistic student names and emails.
-Grade Generation Approaches:
-Initial Approach (Uniform Distribution):
-Initially, grades were generated using a random number generator:
-python
-Copy
-for student in students_list:
-    for course in courses_list:
-        grade = random.randint(50, 100)
-        gm.add_grade(student.student_id, course.course_id, grade, "Fall 2024")
-This produced a uniform distribution that looked unrealistic.
-Improved Approach (Normal Distribution):
-Grades are now generated using a normal distribution to create a realistic bell curve, and students are randomly assigned to a subset of courses:
-python
-Copy
-# For each student, assign a random grade for a randomly selected subset of courses
-for student in students_list:
-    num_courses_for_student = random.randint(2, 4)
-    selected_courses = random.sample(courses_list, num_courses_for_student)
-    
-    for course in selected_courses:
-        mean_grade = 75
-        std_dev = 10
-        generated_grade = np.random.normal(loc=mean_grade, scale=std_dev)
-        generated_grade = int(round(generated_grade))
-        generated_grade = max(0, min(100, generated_grade))
-        gm.add_grade(student.student_id, course.course_id, generated_grade, "Fall 2024")
-Data Analysis & Visualization:
-Visualizations are created using Matplotlib and Seaborn.
-Integration of Data Structures:
-Lists & Dictionaries:
-Used for storing collections of student and course objects.
-Tuples:
-The get_student_tuple function in GradeManager returns a tuple containing a student's ID, name, and email.
-Sets:
-The get_students_in_course function returns a set of student IDs for a given course, enabling set intersections to find students enrolled in multiple courses.
-Installation
-Prerequisites
-Python 3.6 or higher
-pip
-Dependencies
-Install the required libraries using pip. You can either install them individually or use a requirements.txt file:
+## Table of Contents
 
-bash
-Copy
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Data Generation Details](#data-generation-details)
+- [Data Structures & Functionalities](#data-structures--functionalities)
+- [Links](#links)
+- [License](#license)
+
+## Features
+
+- **CSV Filing System & Directory Structure:**
+  - Creates a main folder named **"Student Grade Tracker"**.
+  - Generates separate CSV files for:
+    - **Students**
+    - **Courses**
+    - **Grades**
+  - Creates a **"Reports"** subfolder that stores saved plots and visualizations.
+- **Data Generation:**
+  - Uses the [Faker](https://faker.readthedocs.io/) library for realistic student names and emails.
+  - **Grade Generation Approaches:**
+    - **Initial Approach (Uniform Distribution):**  
+      Initially, grades were generated using a random number generator:
+      ```python
+      for student in students_list:
+          for course in courses_list:
+              grade = random.randint(50, 100)
+              gm.add_grade(student.student_id, course.course_id, grade, "Fall 2024")
+      ```
+      This produced a uniform distribution that looked unrealistic.
+    - **Improved Approach (Normal Distribution):**  
+      Grades are now generated using a normal distribution to create a realistic bell curve, and students are randomly assigned to a subset of courses:
+      ```python
+      # For each student, assign a random grade for a randomly selected subset of courses
+      for student in students_list:
+          num_courses_for_student = random.randint(2, 4)
+          selected_courses = random.sample(courses_list, num_courses_for_student)
+          
+          for course in selected_courses:
+              mean_grade = 75
+              std_dev = 10
+              generated_grade = np.random.normal(loc=mean_grade, scale=std_dev)
+              generated_grade = int(round(generated_grade))
+              generated_grade = max(0, min(100, generated_grade))
+              gm.add_grade(student.student_id, course.course_id, generated_grade, "Fall 2024")
+      ```
+- **Data Analysis & Visualization:**
+  - Visualizations are created using [Matplotlib](https://matplotlib.org/) and [Seaborn](https://seaborn.pydata.org/).
+- **Integration of Data Structures:**
+  - **Lists & Dictionaries:**  
+    Used for storing collections of student and course objects.
+  - **Tuples:**  
+    The `get_student_tuple` function in `GradeManager` returns a tuple containing a student's ID, name, and email.
+  - **Sets:**  
+    The `get_students_in_course` function returns a set of student IDs for a given course, enabling set intersections to find students enrolled in multiple courses.
+
+## Installation
+
+### Prerequisites
+
+- Python 3.6 or higher
+- [pip](https://pip.pypa.io/en/stable/)
+
+### Dependencies
+
+Install the required libraries using pip. You can either install them individually or use a `requirements.txt` file:
+
+```bash
 pip install pandas numpy matplotlib seaborn faker
+
 Or, if you have a requirements.txt:
 
 bash
