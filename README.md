@@ -184,7 +184,7 @@ This approach not only creates a realistic distribution of grades but also simul
 <p align="center">
   <img src="Grade Distribution Plots/course_103_distribution (1).png" alt="Grade Distribution for Course 103" width="600">
   <br>
-  <em>Grade distribution for Biology, demonstrating statistical modelling applied to simulate real-world student performance trends.</em>
+  <em>Grade distribution for Biology.</em>
 </p>
 
 <p align="center">
@@ -196,7 +196,7 @@ This approach not only creates a realistic distribution of grades but also simul
 <p align="center">
   <img src="Grade Distribution Plots/Visualisations Folder.png" alt="Visualisation Folder" width="600">
   <br>
-  <em>Visualization folder in Google Drive containing generated plots for various courses, including the grade distributions for History (102) and Biology (103).</em>
+  <em>Visualisation folder in Google Drive containing generated plots for various courses, including the grade distributions for History (102) and Biology (103).</em>
 </p>
 
 <p align="center">
