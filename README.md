@@ -176,31 +176,31 @@ This approach not only creates a realistic distribution of grades but also simul
 
 ## Image Demonstration
 <p align="center">
-  <img src="course_102_distribution.png" alt="Grade Distribution for Course 102" width="600">
+  <img src="Grade Distribution Plots/course_102_distribution.png" alt="Grade Distribution for Course 102" width="600">
   <br>
   <em>Grade distribution for History, demonstrating statistical modelling applied to simulate real-world student performance trends.</em>
 </p>
 
 <p align="center">
-  <img src="course_103_distribution (1).png" alt="Grade Distribution for Course 103" width="600">
+  <img src="Grade Distribution Plots/course_103_distribution (1).png" alt="Grade Distribution for Course 103" width="600">
   <br>
   <em>Grade distribution for Biology, demonstrating statistical modelling applied to simulate real-world student performance trends.</em>
 </p>
 
 <p align="center">
-  <img src="Grades CSV Database.png" alt="Student Grades CSV" width="600">
+  <img src="Grade Distribution Plots/Grades CSV Database.png" alt="Student Grades CSV" width="600">
   <br>
   <em>Sample of the grades.csv file containing student IDs, course information, grades, and semester data for Fall 2024.</em>
 </p>
 
 <p align="center">
-  <img src="Visualisations Folder.png" alt="Visualisation Folder" width="600">
+  <img src="Grade Distribution Plots/Visualisations Folder.png" alt="Visualisation Folder" width="600">
   <br>
   <em>Visualization folder in Google Drive containing generated plots for various courses, including the grade distributions for History (102) and Biology (103).</em>
 </p>
 
 <p align="center">
-  <img src="Main directory.png" alt="Project Directory" width="600">
+  <img src="Grade Distribution Plots/Main directory.png" alt="Project Directory" width="600">
   <br>
   <em>Main project directory structure showing the data files (courses.csv, grades.csv, students.csv) and reports folder for the Student Grade Tracker system.</em>
 </p>
